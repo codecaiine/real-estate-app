@@ -31,7 +31,16 @@ export default function Home() {
         linkName="/search?purpose=for-rent"
         imageUrl="https://web.whatsapp.com/"
         />
-        <Banner purpose={'For rent'} />
+        <Banner 
+        purpose="BUY A HOME"
+        title1="Find, Buy & Own Your"
+        title2="Dream Home"
+        descr1="Explore Apartments, Villas, Homes"
+        descr2="and more"
+        buttonText="Explore Buying"
+        linkName="/search?purpose=for-sale"
+        imageUrl="https://web.whatsapp.com/"
+        />
     </div>
   )
 }
