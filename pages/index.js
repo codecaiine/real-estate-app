@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Flex, Box, Text, Button } from '@chakra-ui/react';
 
 
-const Banner =()=> (
+const Banner =({purpose, title1, title2, descr1, descr2, buttonText, linkName, imageUrl})=> (
   <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
     <Image src={imageUrl} width={500} height={300} alt="banner" />
     <Box p="5">
