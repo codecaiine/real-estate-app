@@ -5,12 +5,14 @@ import { Flex, Box, Text, Button } from '@chakra-ui/react';
 
 const Banner =()=> (
   <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
-    <Image src="{imageUrl}" width={500} height={300} alt="banner" />
+    <Image src={imageUrl} width={500} height={300} alt="banner" />
     <Box p="5">
       <Text color="gray.500" fontSize="sm" fontWeight="medium">{purpose}</Text>
-      <Text fontSize="3xl" fontWeight="medium">{title1}<br />{title2}</Text>
+      <Text fontSize="3xl" fontWeight="bold">{title1}<br />{title2}</Text>
       <Text fontSize="lg" paddingTop="3" paddingBottom="3" color="gray.700">{descr1}<br />{descr2}</Text>
-      <Button fontSize="xl"></Button>
+      <Button fontSize="xl" bg="blue.300" color="white">
+          <Link href={linkName}>{buttonText}</Link>
+      </Button>
     </Box>
   </Flex>
 )
