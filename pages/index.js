@@ -19,8 +19,7 @@ const Banner =({purpose, title1, title2, descr1, descr2, buttonText, linkName, i
 
 export default function Home() {
   return (
-    <div>
-        <h1>Hello world</h1>
+    <Box>
         <Banner 
         purpose="RENT A HOME"
         title1="Rental Homes for"
@@ -29,7 +28,7 @@ export default function Home() {
         descr2="and more"
         buttonText="Explore Renting"
         linkName="/search?purpose=for-rent"
-        imageUrl="https://web.whatsapp.com/"
+        imageUrl="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
         />
         <Banner 
         purpose="BUY A HOME"
@@ -39,8 +38,8 @@ export default function Home() {
         descr2="and more"
         buttonText="Explore Buying"
         linkName="/search?purpose=for-sale"
-        imageUrl="https://web.whatsapp.com/"
+        imageUrl="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
         />
-    </div>
+    </Box>
   )
 }

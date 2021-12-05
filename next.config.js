@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['web.whatsapp.com']
+    domains: ['images.unsplash.com']
   }
 }
