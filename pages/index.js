@@ -43,6 +43,7 @@ export default function Home() {
         linkName="/search?purpose=for-sale"
         imageUrl="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
         />
+          {/* Fetch the properties and map over them ... */}
     </Box>
   )
 }
