@@ -21,7 +21,16 @@ export default function Home() {
   return (
     <div>
         <h1>Hello world</h1>
-        <Banner purpose={'For sale'} />
+        <Banner 
+        purpose="RENT A HOME"
+        title1="Rental Homes for"
+        title2="Everyone"
+        descr1="Explore Apartments, Villas, Homes"
+        descr2="and more"
+        buttonText="Explore Renting"
+        linkName="/search?purpose=for-rent"
+        imageUrl="https://web.whatsapp.com/"
+        />
         <Banner purpose={'For rent'} />
     </div>
   )
