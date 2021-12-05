@@ -30,6 +30,9 @@ export default function Home() {
         linkName="/search?purpose=for-rent"
         imageUrl="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
         />
+        <Flex flexWrap="wrap">
+          {/* Fetch the properties and map over them ... */}
+        </Flex>
         <Banner 
         purpose="BUY A HOME"
         title1="Find, Buy & Own Your"
