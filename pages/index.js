@@ -20,7 +20,7 @@ const Banner =({purpose, title1, title2, descr1, descr2, buttonText, linkName, i
 
 export default function Home({ propertyForSale, propertyForRent}) {
   console.log(propertyForSale, propertyForRent);
-  
+
   return (
     <Box>
         <Banner 
@@ -34,7 +34,7 @@ export default function Home({ propertyForSale, propertyForRent}) {
         imageUrl="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
         />
         <Flex flexWrap="wrap">
-          {/* Fetch the properties and map over them ... */}
+          {propertyForRent.map((property) => <Property property={property} key={property.id} />)}
         </Flex>
         <Banner 
         purpose="BUY A HOME"
