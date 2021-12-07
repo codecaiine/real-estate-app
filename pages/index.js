@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Flex, Box, Text, Button } from '@chakra-ui/react';
 
+import { baseUrl, fetchApi} from '../utils/fetchApi';
 
 const Banner =({purpose, title1, title2, descr1, descr2, buttonText, linkName, imageUrl})=> (
   <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
@@ -17,7 +18,9 @@ const Banner =({purpose, title1, title2, descr1, descr2, buttonText, linkName, i
   </Flex>
 )
 
-export default function Home() {
+export default function Home({ propertyForSale, propertyForRent}) {
+  console.log(propertyForSale, propertyForRent);
+
   return (
     <Box>
         <Banner 
@@ -31,7 +34,7 @@ export default function Home() {
         imageUrl="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
         />
         <Flex flexWrap="wrap">
-          {/* Fetch the properties and map over them ... */}
+          {propertyForRent.map((property) => <Property property={property} key={property.id} />)}
         </Flex>
         <Banner 
         purpose="BUY A HOME"
@@ -43,7 +46,20 @@ export default function Home() {
         linkName="/search?purpose=for-sale"
         imageUrl="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
         />
-          {/* Fetch the properties and map over them ... */}
+          {propertyForSale.map((property) => <Property property={property} key={property.id} />)}
     </Box>
   )
+}
+
+export async function getStaticProps(){
+  const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for_sale&hitsPerPage=6`)
+  const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for_sale&hitsPerPage=6`)
+
+  return{
+    props: {
+      propertyForSale: propertyForSale?.hits,
+      propertyForRent: propertyForRent?.hits,
+    }
+  }
+
 }
