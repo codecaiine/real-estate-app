@@ -3,7 +3,8 @@
 
 ## Built with 
 
-- nextjs
+- Nextjs
+- Reactjs
 
 ## Getting Started
 
